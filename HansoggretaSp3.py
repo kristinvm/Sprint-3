@@ -1,4 +1,4 @@
-class HansogGretaSp3(object):
+class HansogGretaSp(object):
      def getName(self): pass
      def getDescription(self): pass
      def answer(self): pass
@@ -9,14 +9,24 @@ class HansogGretaSp3(object):
      def eldhusLokad(self): pass
 
 class Herbergi(HansogGreta):
-    def __init__(self, name, description):
+    def __init__(self, name, herb):
         self.name= name
+        self.herb= herb
+        self.herb1='Herbergi 1'
+        self.herb2='Herbergi 2'
         self.description= description
+
+    def StartingHerbergi():
+        description= self.getDescription()
+        self.promblem1()
+
     def getName(self):
         return self.name
     def getDescription(self):
-        if herb == 1:
-            return 'Stórt herbergi, sem inniheldur sófa og arin'
+        if self.herb == 1:
+            print('þú ert í herbergi :',self.herb1)
+            return 'Stórt herbergi, sem inniheldur sófa og arinn'
+            self.getname()
         elif herb == 2:
             return 'Herbergið þar sem vonda nornin sefur'
         else:
@@ -61,8 +71,12 @@ def main():
     while(win == False):
         herb = input('Hvaða herbergi viltu fara í? Veldu 1 fyrir stofu, 2 fyrir svefnherbergi og 3 fyrir baðherbergi.')
         herb = int(herb)
-        des = ""
+        des = 1
         d = Herbergi(herb, des)
+        #input nýtt herbergi
+
+        des=2
+        d2=Herbergi(herb, des)
 
 if __name__ == "__main__":
     main()
