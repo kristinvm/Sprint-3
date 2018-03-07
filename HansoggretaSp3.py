@@ -1,5 +1,4 @@
-#Hans og Gréta
-class HansogGreta(object):
+class HansogGretaSp3(object):
      def getName(self): pass
      def getDescription(self): pass
      def answer(self): pass
